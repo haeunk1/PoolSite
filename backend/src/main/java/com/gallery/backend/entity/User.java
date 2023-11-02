@@ -39,7 +39,7 @@ public class User {
     private String phoneNumber;
 
     @Column(length=50, nullable = false)
-    private LocalDate birthday;
+    private String birthday;
 
     @CreatedDate
     private LocalDateTime createdAt;
