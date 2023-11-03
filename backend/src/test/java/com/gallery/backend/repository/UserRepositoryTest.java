@@ -4,10 +4,8 @@ import com.gallery.backend.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -27,9 +25,8 @@ class UserRepositoryTest {
         testUser.setPassword("1234");
         testUser.setEmail("abcd@abcd.com");
         testUser.setPhoneNumber("01012341234");
-        LocalDate date = LocalDate.of(1999,03,04);
         LocalDateTime currentTime = LocalDateTime.now();
-        testUser.setBirthday(date);
+        testUser.setBirthday("19990111");
         testUser.setCreatedAt(currentTime);
 
         userRepository.save(testUser);
