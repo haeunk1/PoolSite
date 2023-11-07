@@ -47,23 +47,23 @@
 </template>
 
 <script>
-import store from "@/scripts/store";
-import router from "@/scripts/router";
-import axios from "axios";
+// import store from "@/scripts/store";
+// import router from "@/scripts/router";
+// import axios from "axios";
 
 export default {
     name: 'Header',
     setup() {
-        const logout = () => {
-            axios.post("/api/account/logout").then(()=>{
-                store.commit("setAccount", 0)
-                router.push({path: "/"})
-
-            })
-
-            //sessionStorage.removeItem("id")
-        }
-        return {logout}
+        // const logout = () => {
+        //     axios.post("/api/account/logout").then(()=>{
+        //         store.commit("setAccount", 0)
+        //         router.push({path: "/"})
+        //
+        //     })
+        //
+        //     sessionStorage.removeItem("id")
+        // }
+        // return {logout}
     }
 }
 </script>

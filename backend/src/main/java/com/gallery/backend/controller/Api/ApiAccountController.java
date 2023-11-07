@@ -1,19 +1,16 @@
-package com.gallery.backend.Controller.Api;
+package com.gallery.backend.controller.Api;
 
 import com.gallery.backend.Service.JwtService;
-import com.gallery.backend.entity.User;
 import com.gallery.backend.repository.MemberRepository;
 import com.gallery.backend.repository.UserRepository;
 import io.jsonwebtoken.Claims;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.Map;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ApiAccountController {
@@ -27,14 +24,16 @@ public class ApiAccountController {
     JwtService jwtService;
 
     @PostMapping("/api/account/login")
-    public ResponseEntity login(@RequestBody Map<String, String> params,
-                                HttpServletResponse res) {
-        User user = userRepository.findByUserIdAndPassword(params.get("userId"), params.get("password"));
-        if(user != null){
-            int id = user.getId();
-            return new ResponseEntity<>(id, HttpStatus.OK);
-        }
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    public ResponseEntity login() {//@RequestBody Map<String, String> params, HttpServletResponse res
+//        User user = userRepository.findByUserIdAndPassword(params.get("userId"), params.get("password"));
+//        if(user != null){
+//            int id = user.getId();
+//            return new ResponseEntity<>(id, HttpStatus.OK);
+//        }
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+
+        return ResponseEntity.ok().body("token");
+
 //        Member member = memberRepository.findByEmailAndPassword(params.get("email"), params.get("password"));
 //        if (member != null) {
 //            int id = member.getId();
@@ -64,14 +63,14 @@ public class ApiAccountController {
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
-    @PostMapping("/api/account/logout")
-    public ResponseEntity logout(HttpServletResponse res) {
-        Cookie cookie = new Cookie("token", null);
-        cookie.setPath("/");
-        cookie.setMaxAge(0);
-        res.addCookie(cookie);
-
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+//    @PostMapping("/api/account/logout")
+//    public ResponseEntity logout(HttpServletResponse res) {
+//        Cookie cookie = new Cookie("token", null);
+//        cookie.setPath("/");
+//        cookie.setMaxAge(0);
+//        res.addCookie(cookie);
+//
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
 
 }

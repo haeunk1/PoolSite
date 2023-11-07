@@ -1,4 +1,4 @@
-package com.gallery.backend.Controller.Api;
+package com.gallery.backend.controller.Api;
 
 import com.gallery.backend.entity.User;
 import com.gallery.backend.repository.UserRepository;
@@ -32,6 +32,6 @@ public class ApiSignUpController {
 
         newUser.setCreatedAt(currentTime);
 
-        userRepository.save(newUser);
+        //userRepository.save(newUser);
     }
 }
