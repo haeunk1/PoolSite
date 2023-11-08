@@ -1,4 +1,4 @@
-package com.gallery.backend.domain;
+package com.poolSite.backend.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

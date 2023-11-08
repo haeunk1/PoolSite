@@ -1,8 +1,8 @@
-package com.gallery.backend.controller.Api;
+package com.poolSite.backend.controller.Api;
 
-import com.gallery.backend.Service.JwtService;
-import com.gallery.backend.repository.MemberRepository;
-import com.gallery.backend.repository.UserRepository;
+import com.poolSite.backend.Service.JwtService;
+import com.poolSite.backend.repository.MemberRepository;
+import com.poolSite.backend.repository.UserRepository;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,8 @@
-package com.gallery.backend.configuration;
+package com.poolSite.backend.config.oauth;
 
-import com.gallery.backend.domain.Users;
-import com.gallery.backend.repository.UserRepository;
+import com.poolSite.backend.config.oauth.dto.OAuthAttributes;
+import com.poolSite.backend.domain.Users;
+import com.poolSite.backend.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;

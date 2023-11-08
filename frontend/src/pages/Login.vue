@@ -24,7 +24,26 @@
                 </div>
             </div>
             <button class="btn btn-primary w-100 py-2" @click="submit()">Sign in</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+            <div class="col-md-12">
+                <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">or</span>
+                </div>
+            </div>
+
+        <div class="form-group d-flex justify-content-center">
+            <a href="http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:3000/Redirect">
+                <img class="bi me-2" width="55" height="55" src="../assets/img/google.png" />
+            </a>
+            <a href="http://localhost:8080/oauth2/authorize/naver?redirect_uri=http://localhost:3000/Redirect">
+                <img class="bi me-2" width="55" height="55" src="../assets/img/naver.png" />
+            </a>
+            <a href="http://localhost:8080/oauth2/authorize/kakao?redirect_uri=http://localhost:3000/Redirect">
+                <img class="bi me-2" width="55" height="55" src="../assets/img/kakao.png" />
+            </a>
+        </div>
+
+
     </div>
 </template>
 
@@ -84,5 +103,30 @@ export default {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 </style>

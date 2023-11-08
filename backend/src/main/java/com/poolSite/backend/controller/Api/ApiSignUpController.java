@@ -1,7 +1,7 @@
-package com.gallery.backend.controller.Api;
+package com.poolSite.backend.controller.Api;
 
-import com.gallery.backend.entity.User;
-import com.gallery.backend.repository.UserRepository;
+import com.poolSite.backend.entity.User;
+import com.poolSite.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,7 +1,6 @@
-package com.gallery.backend.repository;
+package com.poolSite.backend.repository;
 
-import com.gallery.backend.domain.Users;
-import com.gallery.backend.entity.User;
+import com.poolSite.backend.domain.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,8 +1,8 @@
-package com.gallery.backend.configuration;
+package com.poolSite.backend.config.oauth.dto;
 
 
-import com.gallery.backend.domain.Role;
-import com.gallery.backend.domain.Users;
+import com.poolSite.backend.domain.Role;
+import com.poolSite.backend.domain.Users;
 import lombok.Builder;
 import lombok.Getter;
 

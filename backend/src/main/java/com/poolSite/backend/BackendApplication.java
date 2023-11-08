@@ -1,4 +1,4 @@
-package com.gallery.backend;
+package com.poolSite.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.gallery.backend.configuration;
+package com.poolSite.backend.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
